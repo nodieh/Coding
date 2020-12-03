@@ -1,0 +1,121 @@
+body {
+    /**	margin: 30px;
+	background-image: linear-gradient(black,purple,blue,green,grey);
+	font-family: Segoe, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+	color: white;
+*/
+    /** 
+ * Gradient Background START
+ */
+    margin: 30px;
+    font-size: x-large;
+    color: black;
+    background: linear-gradient(-45deg, rgb(116, 209, 233), rgb(84, 238, 238), rgb(222, 252, 152));
+    background-size: 500% 500%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+    /*
+ * Gradiente Background STOP 
+*/
+    /*
+background-image: url(../img/background.png);
+*/
+}
+
+.titulo {
+    background-color: #EF1E0E;
+    font-family: sans-serif;
+    color: #FFF;
+    text-align: center;
+    padding: 0px;
+}
+
+.imagem_terminal {
+    margin-top: 0px;
+    margin-left: 230px;
+    margin-bottom: 0px;
+}
+
+.imagem_terminal img {
+    width: 700px;
+}
+
+figcaption {
+    font-size: 12px;
+}
+
+.lista_manipulando {
+    font-size: 18px;
+    font-style: italic;
+    font-family: 'Lucida Bright', Georgia, serif;
+    margin-left: 20px;
+    margin-right: 200px;
+}
+
+.sumario li {
+    color: #eeee;
+}
+
+.sumario a {
+    color: #000000;
+}
+
+header {
+    height: 50px;
+    font-size: 40px;
+    color: darkturquoise;
+    /*	background-color: black;*/
+}
+
+.guia b {
+    color: white;
+}
+
+.guiaHome {
+    font-size: 20px;
+}
+
+.guiaMenu {
+    font-size: 70%;
+    color: black;
+    background-color: #EF1E0E;
+}
+
+.container {}

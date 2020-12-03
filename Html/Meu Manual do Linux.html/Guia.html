@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Guia Linux</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <!-- Home buton -->
+            <div class="guiaHome">
+                <a name="home" id="home" href="sumario.html">
+                    <p><b>Página Inicial</b></p>
+
+            </div>
+
+            <!-- Menu superior-->
+            <div class="guiaMenu">
+                </a><a href="#diretorios">Diretórios</a> | <a href="#path">Path</a> | <a href="#bash">Bash</a> | <a href="#comandosInicialização">Comandos de Inicialização</a> |
+                <a href="#comandosSistema"> Comandos do Sistema</a> | <a href="#comandosRedes">Comandos de redes</a> | <a href="#comandosAjuda">Comados de ajuda</a><br>
+                <a href="#manipulaDiretorios">Manipulação de Diretórios</a> | <a href="#manipulaArquivos">Manipulação de Arquivos</a> |
+                <a href="#comandosCompactar">Comandos para Compactar</a> |
+                <a href="#usuariosGrupos">Administração de Usuários e Grupos</a><br>
+                <a href="#permissoes">Permissões</a> | <a href="#manipulaImpressao">Manipulação de impressões</a> | <a href="#manipulaProcessos">Manipulação de processos</a> | <a href="#manipulaMidias">Manipulação de mídias</a> |
+                <a href="#gravandoCds">Gravando CDs</a> | <a href="#emuladores">Emuladores</a> | <a href="#rpm">RPM</a>
+        </header>
+        <br><br><br><br>
+        <h1> Um pequeno guia sobre Linux (bash, comandos, permissões, rede, etc..)
+        </h1>
+
+        <div class="Introducao">
+            <p> Referências<br> * Dicas-L <br> * sites como o LinuxBSD, oLinux, brLinux, RedHat, Conectiva (que foi minha primeira distro),
+                <br> * livros como o 'Usando e Configurando o Sistema Operacional Linux' (de Adilson R. Bonan), <br> * Revistas como a Revista do Linux, Conexão Linux <br> * e é claro, os próprios manuais dos comandos do bash...</p>
+
+        </div>
+        <div class="guia">
+            <p><b> <a name="diretorios" id="diretorios">DIRETÓRIOS</a>
+                        </b><br>
+                <a href="#home">Voltar ao Início</a>
+            </p>
+            Para os que estão se iniciando no Linux, conhecer os diretórios pode ser um pouco difícil, <br> as vezes por causa da sua estrutura peculiar (eu diria, mais organizada) ou por estarem migrando do 'outro'.
+
+            <p><b>/ :</b> raiz do sistema, o diretório que ''guarda'' todos os outros diretórios. É um ''c: da vida''.<br> Uma dica é que ele não possui nenhum arquivo além dos diretórios/arquivos (defalt) do sistema.<br>
+                <b>/bin:</b> arquivos/comandos utilizados durante a inicialização do sistema e por usuários (após a inicialização)
+                <br>
+                <b>/boot:</b> arquivos utilizados durante a inicicialização do sistema<br>
+                <b>/dev:</b> drivers de controle de dispositivos<br>
+                <b>/etc:</b> arquivos de configurações do computador<br>
+                <b>/etc/sysconfig:</b> arquivos de configuração do sistema para os dispositivos.<br>
+                <b>/etc/passwd:</b> dados dos usuários, senhas criptografadas...
+                <br>
+                <b>/etc/fstab:</b> sistemas de arquivos montados no sistema
+                <br>
+                <b>/etc/group:</b> grupos<br>
+                <b>/etc/include:</b> header para programação em C<br>
+                <b>/etc/inittab:</b> arquivo de configuração do init.<br>
+                <b>/home:</b> pasta pessoal dos usuários comuns. Um ''Meus Documentos da vida''<br>
+                <b>/lib:</b> bibliotecas compatilhadas<br>
+                <b>/lib/modules:</b> modulos externos do kernel usados para inicializar o sistema...<br>
+                <b>/misc:</b> arquivos variados<br>
+                <b>/mnt:</b> ponto de montagem de sistemas de arquivos (CD, floppy, partições...)<br>
+                <b>/proc:</b> sistema de arquivos virtual com dados sobre o sistema.
+                <br>
+                <b>/root:</b> diretório pessoal do root<br>
+                <b>/sbin:</b> arquivos/comandos especiais (geralmente não são utilizados por usuários comuns)<br>
+                <b>/tmp:</b> arquivos temporários<br>
+                <b>/usr:</b> Unix System Resources. Contém arquivos de todos os programas para o uso dos usuários de sistemas UNIX.<br>
+                <b>/usr/bin:</b> executáveis para todos os usuários<br>
+                <b>/usr/sbin:</b> executávies de administração do sistema
+                <br>
+                <b>/usr/lib:</b> bibliotecas dos executávies encontrados no /usr/bin
+                <br>
+                <b>/usr/local:</b> arquivos de programas instalados localmente
+                <br>
+                <b>/usr/man:</b> manuais<br>
+                <b>/usr/info:</b> informações<br>
+                <b>/usr/X11R6 :</b> Arquivos do X Window System e seus aplicativos.
+                <br>
+                <b>/var :</b> Contém arquivos que são modificados enquanto o sistema está rodando <br> não é compartilhado em rede por ser específico de cada sistema, estando em constantes modificações.
+                <br>
+                <b>/var/lib :</b> bibliotecas<br>
+                <b>/var/local :</b> arquivos variáveis de processos que estão rodando.<br>
+                <b>/var/log :</b> arquivos de log do sistema<br>
+                <b>/var/run :</b> arquivos úteis até o próximo boot (atualizações de softwares e kernel)<br>
+                <b>/var/tmp :</b> arquivos temporários dos programas</p>
+            <p><b> <a name="path" id="path">O PATH</a> </b><br>
+                <a href="#home">Voltar ao Início</a>
+            </p>
+
+            Para visualizar o path (caminho de procura de arquivos e comandos executáveis), usa-se o comando <i>% echo $PATH</i>.<br> Todos os comandos executáveis serão executados ''se e somente se'' estiverem armazenados na variável path.<br> O comando
+            que está no PATH é executado a partir de qualquer diretório (não importa se o usuário está no home ou no mnt ou qualquer outro).
+            <br> Para inserir um arquivo no path usa-se <i>''./'' (Ex:
+                        ./arquivo
+                        )</i>.<br> Para inserir o caminho para todos os usuários do sistema edite o arquivo <i>/etc/profile ou
+                        /etc/bashrc</i>.<br> Para alterar caminhos de um único usuário, edita-se o arquivo <i>.bash_profile</i> do diretório
+            <i>/home/</i> ou <i>$HOME/.bashrc</i><br> Para adicionar caminhos novos ao ''caminho existente'' use e precione , vá até o fim da linha e adicione o novo caminho. <br> Confira utilizando o comando
+            <i>%
+                        env</i>.<br> Para adicionar novos comando com o alias faça:
+            <br>
+            <i>% alias cdon = ''mount /dev/cdrom /mnt/cdrom''</i> o comando
+            <i>%cdon</i> (recém criado) será adicionado ao path e utilizará o script de montagem do CD-ROM.
+
+
+            <p><b><a name="bash" id="bash"> O BASH </a></b><br>
+                <a href="#home"> Voltar ao Início</a>
+            </p>
+            <b>Ctrl + Alt + BackSpace:</b> reinicia o X<br>
+            <b>Ctrl + Alt + Del:</b> reinicia o sistema em modo texto<br>
+            <b>Ctrl + Alt + F''x'':</b> muda o shell (F1 – F6 (texto), F7 (gráfico))
+            <br>
+            <b>Alt + F''x'' :</b> alterna o shell (modo texto)<br>
+            <b>Alt + B :</b> move o cursor do console para a palavra anterior
+            <br>
+            <b>Alt + F :</b> move o cursor do console para a palavra seguinte
+            <br>
+            <b>Ctrl + A :</b> vai para o início da linha<br>
+            <b>Ctrl + E :</b> vai para o fim da linha<br>
+            <b>Ctrl + C :</b> pára o comando<br>
+            <b>Ctrl + D :</b> logout<br>
+            <b>Ctrl + W :</b> apaga do cursor até o início da palavra<br>
+            <b>Ctrl + U :</b> apaga do cursor até o início da linha<br>
+            <b>Ctrl + K :</b> apaga do cursor até o fim da linha<br>
+            <b>Ctrl + L :</b> clear<br>
+            <b>Ctrl + R :</b> busca incremental no hitórico de comandos<br>
+            <b>Ctrl + T :</b> inverte caractere sob o cursor com o anterior
+            <br>
+            <b>Ctrl + Y :</b> re-inserir o último texto apagado<br>
+            <b>Ctrl + Z:</b> colocar processo em background<br>
+            <b>Shift + Page(UP/DOWN) :</b> navega pelo shell<br>
+            <b>!''x'':</b> repete o último comando (onde ''x'' é o comando a ser chamado – Exemplo: !mount)<br>
+            <b>TAB :</b> autocompletar<br>
+
+
+            <p><b><a id="comandosInicialização">COMANDOS DE
+                                INICIALIZAÇÃO</a></b><br>
+                <a href="#home">Voltar ao Início</a>
+            </p>
+            <b>shutdown :</b>Sintaxe: shutdown [atributo] [tempo]<br>
+            <b>Atributos: -r :</b> reboot<br>
+            <b>-h :</b> halt<br>
+            <b>-n :</b> force (sem sincronizar)<br>
+            <b>-f :</b> reboot rápido<br>
+            <b>-c :</b> cancela shutdown corrente<br>
+            <b>-k :</b> somente simula um shutdown<br>
+            <b>Tempo: now :</b> executar no exato momento<br> Exemplo: Shutdown -r now<br>
+            <b>poweroff :</b> halt<br>
+            <b>init 0 :</b> halt<br>
+            <b>init 3:</b> derruba o modo gráfico<br>
+            <b>init 5:</b> iniciar o modo gráfico<br>
+            <b>init 6 :</b> reboot<br>
+            <b>init q:</b> examinar o arquivo /etc/inittab<br>
+            <b>init s:</b> entrar em modo mono usuário (single mode)<br>
+            <b>exit:</b> termina sessão atual<br>
+            <b>logout :</b> termina sessão atual<br>
+
+            <p><b><a id="comandosSistema">COMANDOS DE SISTEMA</a></b><br>
+                <a href="#home">Voltar ao início</a>
+            </p>
+            <b></b>dmsg | less : mostrar lista de inicialização<br>
+            <b></b>arch : mostra a arquitetura do computador<br>
+            <b></b>uname : informações de sistema<br>
+            <b></b>Parâmetros: -m : hardware<br>
+            <b></b>-n : nome da máquina na rede<br>
+            <b></b>-r : versão do kernel<br>
+            <b></b>-s : nome do OS<br>
+            <b></b>-v : data de compilação do OS<br>
+            <b></b>-a : todas as acima...<br>
+            <b></b>uptime : mostra o tempo em que a máquina está no ar<br>
+            <b></b>free : mostra o uso da memória<br>
+            <b></b>vmstat : Mostra as estatísticas da memória virtual<br>
+            <b></b>ps -aux | grep tty : lista terminais em uso<br>
+            <b></b>tty : mostra em qual terminal o usuário atual está<br>
+            <b></b>stty : exibir ou escolher parâmetos do terminal<br>
+            <b></b>tset : escolher tipo de terminal<br>
+            <b></b>fgconsole : exibe o nº de terminais válidos<br>
+            <b></b>cu : chama outro sistema unix<br>
+            <b></b>type : informa o que faz um certo comando. Exemplo: type mount
+            <br>
+            <b></b>time : mede o tempo gasto para executar um comando<br>
+            <b></b>cal : calendário<br>
+            <b></b>date: data e hora<br>
+            <b></b>who : mostra quem está na máqina no momento<br>
+            <b></b>whoami : mostra quem é você<br>
+            <b></b>last : informa a entrada e saída de usuários no sistema
+            <br>
+            <b></b>lastlog : informa o último usuário que logou no sistema
+            <br>
+            <b></b>at : agendar tarefas. Sintaxe : at [hora][data][comando]
+            <br>
+            <b></b>crontab : programa tarefas.<br>
+            <b></b>Sintaxe: crontab [-parâmetros][usário][arquivo]<br>
+            <b></b>Parâmetros: -l : exibe crontab do usuário atual<br>
+            <b></b>-r : remove crontab do usuário atual<br>
+            <b></b>edita-se o arquivo /usr/spool/cron/crontab . São 6 campos separados por sendo que:<br> 1º é o minuto<br> 2º é o hora<br> 3º é o dia do mês<br> 4º é o mês<br> 5º é o dia da semana (que começa com 0 = domingo)<br> 6º é a tarefa ou script
+            a ser executado<br>
+            <b></b>lspci : lista os dispositivos PCI<br>
+            <b></b>setserial : informações sobre as portas seriais<br>
+            <p><b><a id="comandosRedes">COMANDOS PARA REDES</a></b><br>
+                <a href="#home">Voltar ao Início</a>
+            </p>
+            ifconfig : configura a interface de rede<br> netconf : Interface gráfica do RedHat para confiurar a rede<br> netconfig : Outra interface gráfica para a configuração da rede<br> hostname : nome da máquina<br> netstat : Mostra informações sobre
+            as conexões à rede<br> domainname: Mostra ou ajusta o nome de domínio do sistema<br> route : Mostra e manipula a tabela de roteamento
+            <br> showmount : Mostra informações de sistemas NFS montados sobre a rede<br> nmap: capta informações em conexões remotas, como o sistema operacional usado, portas abertas...<br> Sintaxe: nmap -O 200.0.0.5<br> tracerout : mostra o caminho
+            percorrido do pc até um ''tal'' servidor da internet<br> ping : informações de conexão<br> Parâmetros: -r : avisa se o pacote não chegar ao destino<br> -c''N'' : onde ''N'' é o nº de pings a serem executados<br> -s : determina o tamanho dos
+            pacotes enviados, por defalt é 56bytes<br> rusers : mostra quem está usando as máquinas na rede<br> ruptime : informações sobre máquinas da rede local<br> Parâmetros : -a: usuários inativos a mais de uma hora<br> -l : ordena saída de informações
+            de cada host<br> -r : inverte ordem de saída de informações<br> -t : (uptime)<br> -u: ordena saída por nº de usuários<br> rup: semalhante ao uptime, porém para outra máquina na rede. Sintaxe: rup
+            <br> rwho : mostra o que está ''sendo feito'' nos computadores da rede local (semelhante ao ruptime)<br> mail : rebe ou envia e-mail<br> smbclient : Cliente para redes SAMBA.
+            <br> smbmount : Monta um sistema de arquivos SAMBA (Windows)<br>
+            <p><b><a id="comandosAjuda"> COMANDOS DE AJUDA </a></b><br>
+                <a href="#home">Voltar ao início</a>
+            </p>
+            man: manual de ajuda. Exemplo : man mount xman : man em modo gráfico info : como o man, porém com links nos textos makewhatis : levanta banco de dados para o comando apropos apropos:levanta respostas de comandos desconhecidos, antes deve-se executar makewhatis.
+            Exemplo : % apropos compiler (serão localizados arquivos que contenham a descrissão de compiler). help: ajuda do shell atual
+            <p><b><a id="manipulaDiretorios">COMANDOS PARA MANIPULAÇÃO
+                                DE
+                                DIRETÓRIOS</b></a><br>
+                <a href="#home">Voltar ao início</a>
+            </p>
+            cd : entra no diretório<br> Atributos: - : volta ao último diretório buscado<br> ~ [nomedapastadousuario] : vai para a pasta do usuário<br> / : diretório raiz<br> .. : diretório ''acima''
+            <br> ls : lista arquivos e diretórios<br> Atributos : -C : exibe em colunas<br> -R : modo recursivo<br> -a : mostra ocultos
+            <br> -l : mostra propriedades<br> mkdir : cria um diretório
+            <br> rmdir : remove um diretório (atributo : -R para deletar diretórios não vazios)<br> pwd : mostra o diretório atual
+            <br> cp : copia diretórios<br> Atributos: -f : não perguta para sobrescrever<br> -i : pergunta para sobrescrever<br> -r : cópia recursiva<br> mv : movimenta diretórios (mesmos atributos do cp)<br> du : mostra hierarquia<br> Atributos: -a :
+            informações de todos os arquivos<br> -b : mostra em bytes<br> -k : mostra em kbytes
+            <br> -s : lista o total de cada argumento<br> -x : ignora diretórios com sistemas de arquivos diferentes<br> -S : apresenta o tamanho de cada diretório separadamente<br> diff : exibe diferenças entre 2 arquivos ou diretórios<br> diff3 : exibe
+            diferenças entre 3 arquivos ou diretórios<br> ln : link simbólico para arquivos e/ou pastas. Exemplo: ln linux-2.6 kernel-atual
+            <br>
+
+            <p><b><a id="manipulaArquivos">COMANDOS PARA MANIPULAÇÃO DE
+                                ARQUIVOS</b></a><br>
+                <a href="#home">Voltar ao início</a>
+            </p>
+            bash : executa o bash basename :exclui o sulfixo do arquivo fsbrowser : encontra arquivos ou diretórios no pc head : lista a primeira parte dos arquivos tail : o contrário do head cat : exibe conteúdo do arquivo ou direciona-o para outro Exemplos: cat
+            /home/fulano/contato (exibe o conteúdo do arquivo contato) cat contato1 > contato2 (faz uma cópia do arquivo contato) cat contato1 >> contato2 (adiciona um arquivo ao outro) cat musica.wav > /dev/dsp1 (direciona o som para o dispositivo de
+            audio) cat arquivo1 arquivo 2 | gzip > arquivo1e2.gz (compacta arquivo1 e arquivo2 num só arquivo) tac : inverso do cat file : identifica o tipo de arquivo find : localiza arquivo ou diretório. Sintaxe: find [opções] [dados] [opções] Opções:
+            -name: parâmetro seguido do arquivo a ser procurado -print : mostrar resultado na tela -exec ''comando'' : executa um comando -ok : idem a exec, porém pergunta antes de executar o comando awk : procura por um modelo apartir de um arquivo bdiff
+            : compara 2 arquivos grandes bfs: procura um arquivo grande diff : exibe diferenças entre 2 arquivos ou diretórios uniq : compara 2 arquivos, exibe as linhas incomparáveis do arquivo diff3: exibe diferenças entre 3 arquivos ou diretórios cmp
+            : compara 2 arquivos, mostra a localização da primeira diferença entre eles comm: compara 2 arquivos para determina quais linhas são comuns entre eles split : dividir um arquivo more e less : filtros depaginação Exemplos : more /etc/fstab
+            ps -aux | less ls : lista arquivos do diretório Atributos : -C : exibe em colunas -R : modo recursivo-a : mostra ocultos -l : mostra propriedades cp : copia arquivos Atributos: -f : não perguta para sobrescrever -i : pergunta para sobrescrever
+            -r : cópia recursiva mv : movimenta arquivos (mesmos atributos do cp) rm : remove um arquivo wc: (não cacete! não é banheiro não!) esse aí lista as propriedades dos arquivos Atributos : -l : nº de linhas do arquivo -c : n de cracteres -w :
+            nº de palavras -b : nº de bytes grep : uma espécie de busca. Exemplo: % grep tty od : mostra o arquivo em formato octal ln : link simbólico para arquivos e/ou pastas. Exemplo: ln linux-2.6 kernel-atual
+
+            <p><b><a id="comandosCompactar">COMANDOS PARA COMPACTAR</b></a><br>
+                <a href="#home">Voltar ao início</a>
+            </p>
+            Sem descrissões... todos fazem a mesma coisa, só que em formatos diferentes, dependendo da ocasião um pode ser melhor que o outro... depende do ''gosto'' de cada um... compress/ uncompress : compacta / descompacta em .z Sintaxe : idem a bzip2 Atributos:
+            -f : compacta em background -c : desmpacta na tela -V : informações sobre o arquivo -v : informações sobre a compactação corrente -d: junto dom o compress, descompacta o arquivo tar : Atributos: -t : lista conteúdo do arquivo tar -x : extrai
+            arquivos -c : cria um arquivo tar -d : compara um arquivo tar com arquivos atuais -r : anexa arquivos no fim do arquivo tar -u : analiza arquivos -A : anexa outros tar -v : mostra informações de processamento Exemplos: tar cvM -L 1350 -f /mnt/floopy/partes.tgz
+            grande.tgz : quebra um arquivo grande em partes menores. tar pvfx arquivo.tar: extrai tar tar zpvfx : extrai tar.gz ou tgz tar jpvfx : extrai tar.bz2 gzip : compacta arquivos e nomes de arquivos com mais de 14 letrras Atributos: -d : descompacta
+            -f : compacta -l : informações sobre arquivo compactado -r : recursivo gunzip : descompacta Exemplo: gzip -c arquivo1 > arquivo1e2.gz ; gzip -c arquivo2 > arquivo1e2.gz ou cat arquivo1 arquivo 2 | gzip > arquivo1e2.gz (compacta arquivo1 e
+            arquivo2 num só arquivo) bzip / bunzip: compacta / descompacta bzcat : descompacta na tela do sistema bzip2recover : recupera arquivos danificados quando for possível Atributos : -1 : (1, 2,3...9) sendo que 9 é o maior fator de compactação
+            -v : informações de processamento -c : descompacta na tela do sistema -d : descompacta -t : verifica integridade do arqivo -f : sobrescreve -s : reduz us da memória exigida cpio: executa funções equivalentes a arquivos de dados em formato
+            cpio ou tar, e contém informações sobre o arquivo. Seus modos de arquivamento são entrada, saída e passagem. Modo de entrada: extrai arquivos de um arquivo maior, caso não for inserido um padrão, todos são extraídos. Modo de saída: copia os
+            arquivos em um arquivo maior Modo de passagem : combina os modos de entrada e saída sem usar modo de arquivamento, copia uma árvore de diretórios para outra Parâmetros: -0 : (saída / passagem) lê arquivo terminado em caractere nulo; ao invéz
+            de nova linha -A : (saída) adiciona um arquivo existente; deve estar especificado -0 ou -F -d : cria diretório (se for preciso) -H : indica o formato do arquivo maior -i : (entrada) extrai -o : (saída) cria -t : (entrada) lista tabela -u :sobrescreve
+            sem perguntar -v : lista arquivos processados
+
+            <p><b><a id="usuariosGrupos">USUÁRIOS E GRUPOS</a></b><br>
+                <a href="#home">Voltar ao início</a>
+            </p>
+            useradd : adiciona usuário userdel : exclui usuário username : exibe nome do usuário logado no momento users : exibe os usuários logados no momento usermod : Modifica um usuário. id : identificação do usuário e grupos a que pertence passwd : adiciona
+            senha em usuário já cadastrado. Exemplo: % passwd fulano chpasswd : muda senha de usuário groupadd : cria grupo groupdel : exclui grupo groups : lista grupos groupmod : Modifica um grupo newgrp : altera identificação do grupo chgroup : altera
+            propriedade do grupo chown : altera usuário/propriedade do grupo de cada arquivo especificado. Ex: % chown -R root /home sg : executa comando como se fosse de outro grupo su : usado para ganhar permissão de root. wall : Manda uma mensagem
+            para todos no terminal.
+
+            <p><b><a id="permissoes">PERMISSÕES</a></b><br>
+                <a href="#home">Voltar ao início</a>
+            </p>
+            Primeiramente precio dar umas breves explicações sobre permissões, dono, grupo e coisarada de esquemas... Vou mostrar permissões no modo ''literal'' e no modo ''octal'', que são mais fáceis e mais usadas, porém pode ser feito com aplicativos, cliques
+            no botão direito e coisarada, se a distro tiver tal recurso. Para todos os modos usa-se o comando: % chmod [opções] [permissão] [diretório] Atributos: -v : mostra arquivos processados -f : não mostra mensagens de erro -c : mostra somente arquivos
+            com permissão -R : recursivo Dono: é o usuário que criou o arquivo Grupo: é um recurso para que vários usuários tenham como ''usar'' um mesmo arquivo Outros : não são donos e nem pertencem ao grupo do arquivo
+
+            <p><b>ESQUEMA USADO NO % ls -l</b></p>
+            r : permite leitura w : permite edição/gravação x : permite executar arquivos executáveis. Se for um dietório, pode ser acessado pelo comando % cd Se houver 1 ''d'', indica que é um diretório; se houver um ''-'' indica um arquivo Exemplo: -rw------- (somente
+            o dono pode ler e gravar no arquivo)
+
+            <p><b>MODO LITERAL:</b></p>
+            Esse é o modo em que o sistemas nos mostra as permissões num % ls -l, mas esse é o mais ''chatinho'' pois é feito linha por linha. [a]LL : todos [g]roup : grupo [o]thers : outros [u]ser : dono [+] : adiciona permissão [-] : remove permissão Com o comando
+            % chmod ficaria assim: % chmod a -rx /mnt (retira a permissão de leitura e execussão para todos no diretório /mnt) % chmod o +r /mnt (da permissão para ''outros'', no caso os que não pertencem ao grupo do dono)
+
+            <p><b>MODO OCTAL:</b></p>
+            É o jeito mais fácil e rápido de ''adminitrar'' permissões, pois usa números de 0 a 7 para dar permissões para dono, grupo e outros numa única linha de comando. É uma verdadeira economia de tempo e paciência... :-) Depois do % chmod usa-se 3 dígitos (que
+            como já disse, variam de 0 a 7). O 1º indica a permissão do dono do arquivo, o 2º indica o grupo do dono e o 3º indica os outros usuários...
+
+            <p><b>DÍGITO PERMISSÃO (UGOA)</b></p>
+            0 Nenhuma --- 1 Executar --x 2 Escrever -w- 3 Escrever/Executar -wx 4 Ler r-- 5 Ler/Executar r-x 6 Ler/Escrever rw- 7 Ler/Escrever/Executar rwx Exemplo: % chmod -R 750 /mnt (Dono: pode Ler, Escrever e Executar; Grupo: pode Ler e Executar, e os outros
+            não podem nada) para o diretório /mnt e todos os seus subdiretórios.
+
+            <p><b>COMANDOS PARA MANIPULAR IMPRESSÃO</b></p>
+            lpq : mostra trabalhos de impressão atual lpr : copia um arquivo para a linha da impressora lprm : remove trabalhos de impressora lpstat: informações Atributos: -a : lista relatórios enviados para a impressora -p : lista o estado das impressoras -s :
+            sumário do estado das impressoras -R : mostra o nº de cada jobna fila de impressão
+
+            <p><b>COMANDOS PARA MANIPULAR PROCESSOS</b></p>
+            ps -aux | less: mostra o PID dos processos top : mostra todos os processos ativos no pc. (em modo grafico usa-se ktop (do kde) gtop (do gnome)...) kill: mata um processo pelo PID. Sintaxe: kill [PID] killall : mata processospelo nome. Sintaxe: killall
+            -HUP [nome] sleep : torna um processo inativo por determinado tempo nice : prioridade de execussão (-19 é o máximo e 19 é o mínimo). Sinaxe: nice [opções][comando] & : quando colocado no fim da linha, executa o processo em 2º plano (ou background
+            se preferir) jobs : exibe processos em 2º plano bg : ao rodar um processo tecle Ctrl + Z para congelar o processo, depois digite bg para o programa voltara ''rodar'' em 2º plano. fg: para fazer o processo voltar ao 1º plano. Sintaxe: fg [nº
+            do processo] nohup : logout sem matar processos no 2º plano. Exemplo: nohup cc program C & ; logout
+
+            <p><b>COMANDOS DE MANIPULAÇÃO DE MÍDIAS</b></p>
+            cfdisk : particionador mke2fs : formata o hd. Exemplo: mke2fs -j /dev/hda1 (formata a primeira partição do hd primário em ext3) dosfsck : Verifica e repara sistemas FAT do DOS dumpe2fs : Faz o backup de blocos do HD e grupos. e2fsck : Verifica um volume
+            ext2 em busca de erros. E2label : Muda o nome de uma partição ext2. dump : Usado para fazer o backup de um sistema ext2. O complemento deste comando é o restore restore : Usado para restaurar um sistema ext2. badblock: busca por setores ruins
+            fsck: faz reparos na partição df : mostra espaço usado, livre e a capacidade das partições do HD mount : monta dispositivo. Exemplo: mount -vfat /dev/hda1 umount : desmonta dispositivo. Exemplo: unmount /mnt/cdrom supermount : monta dispositivos
+            automaticamente. Sintaxe: supermount [opções] [/local/do/dispositivo] mformat : formatação de baixo níveis em disquetes no formato M$-DOS fdformat : formatação de baixo níveis em disquetes. Exemplo: fdformat /dev/fd0 H1440
+
+            <p><b>GRAVANDO CDs</b></p>
+            Aqui eu vou falar de gravação pelo console mesmo... linhas de comando... as vezes até acaba sendo mais fácil... Ah! Essas aí foram inteiramente retiradas de um e-mail que recebi da Dicas-L :-) Cds de Áudio: % cdrecord dev=0,0,0 -pad -dao -v -eject -audio
+            track01.wav...trackN.wav -eject : ejeta no final -dao : para não ficar com muito espaço entre as faixas -pad : enche (se necessário) os arquivos com o número correto de espaços (para o aparelho de som ler em múltiplos de 2352 bytes) Convertendo
+            mp3 para cdr: mpg123 –cdr – track1.mp3 > track1.cdr grave usando -audio para indicar cada trilha nice -19 cdrecord -eject -v speed=8 dev=1,1,0 -audio track1.cdr track2.cdr... Decodificar mp3 direto no CD: for | in*.mp3 do mpg123 –cdr - ''$|''
+            | cdrecord -dummy – audio -pad -nofix - done cdrecord -fix Parâmetro: -dummy : Simulação Criando ..iso: mkhybrid -r -j -o imagem.iso diretório_dos_arqivos Testando o .iso antes de gravar mount -t iso9660 -o loop imagem.iso /mnt/iso Fazendo
+            uma cópia fiel de cd pra cd: cdrecord -v speed=8 dev=1,1,0 -isosize /dev/cdrom Fazendo CD de Boot: Crie a imagem apartir de um disquete de boot dd if=/dev/fd0 of=boot.img bs=18k Apagando CD-RW Para sobrescrever um CD-RW use o parâmetro blank=fast
+            no cdrecord CD-ROM de audio e dados: cdrecord -v speed=8 dev=1,1,0 -data imagem.iso -audio track1.cdr track2.cdr
+
+            <p><b>EMULADORES*</b></p>
+            * os ''comandos'' citados nesse tópico necessitam do aplicativo instalado (as vezes vem com a própria distro... dá uma ''baga no pc pra ve se tem... heheh) * o Wine não se ''considera'' emulador como seu nome diz (Wine Is Not Emulator), mas... acho que
+            aqui é melhor pra falar desse treco. * Leia (!) os arquivos de ajuda de cada ferramenta asseguir citadas, isso impede que a ''pecinha'' (que tá olhando pro pc) cometa algum erro e venha com a mensagem : - ''Ai meu Deus, não funciona... Ahhhhhh''
+            WINE : esse daí emula o rWindows. Pode emular programas que ESTÃO numa partição com Windows ou num pc SÓ com linux (basta configurar... não vou dar muitos detalhes porque é meio que MUITA COISA). Depois de configurado certinho é só dá um %
+            wine calc (pra abrir a calculadora do rWindows... Tá, foi um exemplo ''meio'' inútil, mas foi só exemplo). Dra pra rodar até jogos... DOSEMU : emulador de programas para M$-DOS... Sintaxe: % dos (ou xdos no modo gráfico) MTOOLS : emula comandos
+            do M$-DOS (pra que diabos alguém ia querer isso? Sei lá) usa-se ''m'' antes do comando. Exemplo: mtools , mdir, mdel ...
+
+            <p><b>USANDO O RPM</b></p>
+            RPM é um pacote (normalmente pré-compilado para cada distro) de fácil instalação. Com uma só linha de comando ou cliques no rato são suficientes para instalar e não se incomodar com compilações e coisarada... Sintaxe : rpm [parâmetros][opções][pacote.rpm]
+            Parâmetros : -i : instala -e : desinstala -q : consulta -v : verbose -h: exibe ''#'' como porcentagem a medida que o pacote se instala showrc : exibe checksig : verifica assinatura setugids [especificações do pacote] : ajusta UID etperms [especificações
+            do pacote] : ajusta permissões + : após de um parâmetro, indica que pode haver repetição Mas não é só isso minha gente!!! (aeeeeeeeeee!!!). Tá aí algumas receitas de bolo (mas não deixe dar usar um % man pra REALMETE aprender os segredos milenares
+            – mas nem tanto – desse desse comando). Obtendo instalações de pacotes instalados: % rpm -qa | sort | less : lista em ordem alfabética os pacotes instalados % rpm -qa | wc -1 : mostra a quantidade de pacotes instalados % rpm -qf /usr/bin/nomedopacote.rpm
+            : mostra os pacotes pertencentes ao arquivo % rpm -qa | grep gimp: lista todos os arquivos que correspondem ao gimp Para pacotes não instalados: % rpm -qip /.../.../pacote.rpm : informações do pacote % rpm -qdp /.../.../pacote.rpm : encontra
+            documentação % rpm -qp /.../.../pacote.rpm : mostra como será o nome do pacote % rpm -qlp /.../.../pacote.rpm : lista os arquivos do pacote % rpm -qcp /.../.../pacote.rpm : lista arquivos de configuração dos pacotes % rpm -q –whatrequires
+            /.../.../pacote.rpm : mostra o requerimentos Desinstalação depacotes: % rpm – e [opções] pacote.rpm Opções: --allmatches : remove todas as versões do pacote --noscripts : não executa scripts de pré/pós instalação --nodeps : verifica se as
+            dependências serão quebradas --test : somente simula a desinstalação Instalação/Atualização de pacotes: % rpm -ivh [opções] pacote.rpm : instala % rpm -Uvh [opções] pacote.rpm : atualiza Opções: --force : sobrescreve --noscripts : não executa
+            scripts de pré/pós instalação --nodeps : verifica se as dependências serão quebradas --excludedocs : não instala arquivos de texto --test : somente simula a desinstalação --percent : exibe porcentagem --oldpkage : atualiza para versão anterior
+            --replacepkgs : substitui arquivos instalados --allfiles : instala atualiza pacotes faltantes % whereis : mostra a localização dos binários do pacote instalado % rpm -ivh /.../.../gimp-* : instala todos os pacotes do gimp simultaneamente Instalação
+            por FTP: % ftp://:@host /.../.../arquivo.rpm Opções: --ftpproxy : a ''máquina'' do host citado será o servidor proxy para tranferências --ftpport: Especifica uma porta TCP ao invéz de FTP (porta 21). É cara, troca o xxx pelo número da porta.
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>

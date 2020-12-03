@@ -1,0 +1,96 @@
+
+(function (window, undefined) {
+	"use strict";
+	if (!mplx) {
+	  var mplx = {};
+	}
+	mplx.outVars = {
+		"mpcke": "<mpcke/>",
+		"mpi": "<mpi/>",
+		"mpcrgif": "<mpcrgif/>",
+		"mpcrw": "<mpcrw/>",
+		"mpcrh": "<mpcrh/>",
+		"mpadmarker": "<mpadmarker/>",
+		"mpadmarkerurl": "<mpadmarkerurl/>",
+		"mpcrflash": "<mpcrflash/>",
+		"mpcrid": "<mpcrid/>",
+		"geozip": "<geozip/>",
+		"geocity": "<geocity/>",
+		"geoareacode": "<geoareacode/>",
+		"geocountry": "<geocountry/>",
+		"geostate": "<geostate/>",
+		"geotz": "<geotz/>",
+		"geocontinent": "<geocontinent/>",
+		"geodma": "<geodma/>",
+		"ptoffsetyear": "<ptoffsetyear/>",
+		"ptoffsetmonth": "<ptoffsetmonth/>",
+		"ptoffsetday": "<ptoffsetday/>",
+		"ptoffsethour": "<ptoffsethour/>",
+		"ptoffsetmin": "<ptoffsetmin/>",
+		"refdomain": "<refdomain/>",
+		"placementid": "<placementid/>",
+		"mpaltexp": "<mpaltexp/>",
+		"mpaltflash": "<mpaltflash/>",
+		"mpanimate": "<mpanimate/>",
+		"mpauto": "<mpauto/>",
+		"mpcrflash2": "<mpcrflash2/>",
+		"mpcrflv": "<mpcrflv/>",
+		"mpcrgif2": "<mpcrgif2/>",
+		"mpcrn": "<mpcrn/>",
+		"mpcrn_aol": "<mpcrn_aol/>",
+		"mpcrpv": "<mpcrpv/>",
+		"mpcrwin": "<mpcrwin/>",
+		"mpcrwinex": "<mpcrwinex/>",
+		"mpcrx": "<mpcrx/>",
+		"mpcrxh": "<mpcrxh/>",
+		"mpcrxw": "<mpcrxw/>",
+		"mpcry": "<mpcry/>",
+		"mpcrz": "<mpcrz/>",
+		"mpexdelay": "<mpexdelay/>",
+		"mpexpandspeed": "<mpexpandspeed/>",
+		"mphd": "<mphd/>",
+		"mpmouseout": "<mpmouseout/>",
+		"mpocd": "<mpocd/>",
+		"mpoverflow": "<mpoverflow/>",
+		"mpovrly": "<mpovrly/>",
+		"mppshdwn": "<mppshdwn/>",
+		"mpretdelay": "<mpretdelay/>",
+		"mprmtype": "<mprmtype/>",
+		"mpretractspeed": "<mpretractspeed/>",
+		"mpsingle": "<mpsingle/>",
+		"mpsv": "<mpsv/>",
+		"mpswfoffset": "<mpswfoffset/>",
+		"mpvd": "<mpvd/>",
+		"mpssl": "1",
+		"mpck": "adfarm.mediaplex.com/ad/ck/12255-249188-2056-78?mpt=2103124514&mpcr=102560916&mpcrset=root",
+		"mpvc": "https://www.googleadservices.com/pagead/aclk?sa=L&ai=C-Pwewp05XdWjCsqKhwe5vq_gA76JzNFXu5HJ6Z4J15bp8MsUEAEgsO6SIWDNgICA_AKgAcSBm-wDyAEJqQIKeMB0WMiRPqgDAaoEoAJP0PLkZeHcV-v5Ye639FXgs1dRLHnCE8bVd_vRxWQSAFQc4yv9M23nZoR24Nav3E2fVzwIBygj49NRwr7ZtWf9x-vnp9jfSBS2sk-rZf_01p5fVTiHdD8vDOpqA8Y0PNPAFefMUQd4QLzZWBEuYgTNXbkjDBAaB7OnbPrm2_AcYJj4JOB0zrqXBQC7SDUSmJTCl7M1bv8r8jMEAPTy8pMmSIzx72pXMTA3cDiZnUJ4bvdQ4kosCqZwqKG1vvnDD5MgkMAezg4ynDKcJOuwimytpJ52DouBaML6vxq3AlT3hljo99DnxKHx2yUuzaGlH9ZEKI1890UJzNYWv-mcwPE1HWFTsr44n85OG3UYKg0xBzaCzh3n17kVQ_8S5BT-4l6gBhGAB7mwsROoB47OG6gH1ckbqAfB0xuoB4XUG6gHgdQbqAeC1BuoB4bUG6gHhNQbqAfg0xuoB7oGqAfZyxuoB8_MG6gHpr4bqAfz0RuoB-zVG9gHANIIBwiAARABGA6ACgHYEwI&num=1&cid=CAASEuRo21-Lf_xavolJxwqSmrgXRg&sig=AOD64_0mpqaajlQ5csMqrQ8iCq7NHRWing&client=ca-pub-4040695960307882&adurl="
+	};
+
+	mplx.mpqs = "mpt=2103124514";
+	mplx.mpqs = (mplx.mpqs !== "") ? mplx.mpqs : "";
+	for (var props in mplx.outVars) {
+		if (mplx.outVars[props].indexOf("/>") < 0 ) {
+			mplx.mpqs += "&" + props + "=" + encodeURIComponent(mplx.outVars[props]);
+		}
+	}
+
+	mplx.iFrameSrc = (mplx.outVars.mpssl == 1 ? "https://img.mediaplex.com/content/0" : "http://img.mediaplex.com/content/0") + "/12255/310143_br_cs_co_dir_fy20q2w12_ba_MPHTML-KyloRen15GambitItalia9380-ci7-NA-BlackDays_728x90_VAR.html" + "?" + mplx.mpqs;
+	mplx.mojoframe = '<iframe border="0" src="' + mplx.iFrameSrc + '" width="728" height="90" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" bordercolor="#000000"></iframe>';
+	document.write(mplx.mojoframe);
+
+	mplx.randJSI = Math.floor(Math.random()*100000+1);
+	document.write('<div id="mojoJSI_' + mplx.randJSI +'" style="height:0px; width:0px;"></div>');
+	mplx.mpjs = String("https://cdn.doubleverify.com/dvtp_src.js?ctx=10972573&cmp=249188&sid=2056&plc=12255249188205678&num=&adid=&advid=236&adsrv=8&region=30&btreg=12255249188205678&btadsrv=mediaplex&crt=102560916&dvp_plcd=12255-249188-2056-78&crtname=&chnl=&unit=&pid=&uid=&tagtype=&dvtagver=6.1.src");
+	if (mplx.mpjs && typeof mplx.mpjs === "string" && mplx.mpjs.length > 0 && mplx.mpjs!="<mp"+"jsp/>") {
+		mplx.mpscr = {};
+		mplx.mojoTiny = document.getElementById("mojoJSI_" + mplx.randJSI);
+		mplx.mpjs = mplx.mpjs.split( " " );
+		for( var i = 0; i < mplx.mpjs.length; i++ ) {
+			mplx.mpscr = document.createElement("script");
+			mplx.mpscr.type = "text/javascript";
+			mplx.mpscr.async = true;
+			mplx.mpscr.src = mplx.mpjs[i];
+			mplx.mojoTiny.appendChild(mplx.mpscr);
+		}
+	}
+})(window);

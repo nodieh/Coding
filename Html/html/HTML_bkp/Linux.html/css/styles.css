@@ -1,0 +1,93 @@
+
+body {
+/**	margin: 30px;
+	background-image: linear-gradient(black,purple,blue,green,grey);
+	font-family: Segoe, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+	color: white;
+*/
+
+/** 
+ * Gradient Background START
+ */
+
+
+		color: #fff;
+		background: linear-gradient(-45deg, blue, green);
+		background-size: 400% 400%;
+		-webkit-animation: Gradient 15s ease infinite;
+		-moz-animation: Gradient 15s ease infinite;
+		animation: Gradient 15s ease infinite;
+	}
+
+@-webkit-keyframes Gradient {
+							0% {
+									background-position: 0% 50%
+								}
+							50% {
+									background-position: 100% 50%
+								}
+							100% {
+									background-position: 0% 50%
+								}
+							}
+
+@-moz-keyframes Gradient {
+							0% {
+									background-position: 0% 50%
+								}
+							50% {
+									background-position: 100% 50%
+								}
+							100% {
+									background-position: 0% 50%
+								}
+						}
+
+@keyframes Gradient {
+						0% {
+								background-position: 0% 50%
+							}
+						50% {
+								background-position: 100% 50%
+							}
+						100% {
+								background-position: 0% 50%
+							}
+					}		
+
+/**
+ * Gradiente Background STOP 
+*/
+
+.titulo {
+			background-color: #EF1E0E;
+			font-family: sans-serif;
+			color: #FFF;
+			text-align: center;
+			padding: 0px;
+		}
+
+.imagem_terminal {
+					margin-top: 0px;
+					margin-left: 230px;
+					margin-bottom: 0px;
+				}
+
+img {
+		width: 800px;
+
+	}
+
+figcaption {
+				font-size: 12px;
+			}
+
+
+
+.lista_manipulando {
+	font-size: 18px;
+	font-style: italic;
+	font-family: 'Lucida Bright', Georgia,  serif;
+	margin-left: 20px;
+	margin-right: 200px;
+}

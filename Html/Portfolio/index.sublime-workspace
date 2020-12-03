@@ -1,0 +1,331 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"marg",
+				"margin-left\tproperty"
+			],
+			[
+				"margin",
+				"margin-right\tproperty"
+			],
+			[
+				"magin",
+				"margin-left\tproperty"
+			],
+			[
+				"fon",
+				"font-size\tproperty"
+			],
+			[
+				"ita",
+				"italic\tfont-style"
+			],
+			[
+				"lucidaa",
+				"'Lucida Bright', Georgia,  serif"
+			],
+			[
+				"margi",
+				"margin-left\tproperty"
+			],
+			[
+				"cen",
+				"center\ttext-align"
+			],
+			[
+				"u",
+				"Segoe, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+			],
+			[
+				"font",
+				"font-style\tproperty"
+			],
+			[
+				"padd",
+				"padding\tproperty"
+			],
+			[
+				"padding",
+				"padding-top\tproperty"
+			],
+			[
+				"a",
+				"ajax\tGoogle AJAX Libraries: Ext Core"
+			],
+			[
+				"alig",
+				"align-content\tproperty"
+			],
+			[
+				"wi",
+				"width\tproperty"
+			],
+			[
+				"fig",
+				"figcaption\tTag"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"text",
+				"text-align\tproperty"
+			],
+			[
+				"bck",
+				"background-color\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"sni",
+				"Snippet: CSS - font-family: serif;"
+			],
+			[
+				"font",
+				"Snippet: CSS - font-family: serif;"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"font-fam",
+				"Snippet: CSS - font-family: sans-serif;"
+			],
+			[
+				"colo",
+				"Color Picker"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"keym",
+				"Keymaps: Cheat Sheet"
+			],
+			[
+				"remove",
+				"Package Control: Remove Channel"
+			],
+			[
+				"border",
+				"Snippet: CSS - box-sizing: border-box;"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"placeholder",
+				"Snippet: Image - Placeholder"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"snip",
+				"Snippet: img"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"package control",
+				"Package Control: Add Channel"
+			],
+			[
+				"arcad",
+				"Package Control: Add Channel"
+			],
+			[
+				"sn",
+				"Snippet: Lorem ipsum"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/dieh/Documentos/Exercício 1/css/styles-gabarito.css",
+		"/home/dieh/Documentos/Exercício 1/gabarito.html",
+		"/home/dieh/Documentos/HTML/animated-background-gradient-using-simple-css3-code/index.html",
+		"/home/dieh/Documentos/HTML/Linux.html/css/styles.css",
+		"/home/dieh/Documentos/HTML/Linux.html/index.html",
+		"/home/dieh/Documentos/HTML/Linux.html/projeto01.sublime-project",
+		"/home/dieh/Documentos/HTML/Site Aulas/index.html"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 109.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"index.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documentos/HTML/Linux.html/projeto01.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 166.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

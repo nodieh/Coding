@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <meta charset="UTF-8">
+    <head>
+        <title>Como trocar o '/home' de diretório</title>
+        <style>
+            body {
+                color:black;
+                background-color:whitesmoke;
+            }
+
+            h1 {
+                text-align: center;
+                background-color: teal;
+            }
+
+            i {
+                color: blue;
+                background-color:white;
+            }
+
+        </style>
+    </head>
+    
+    <body>
+        <div>
+            <h1>Como trocar sua pasta /home para outro HD.</h1>
+            <hr> 
+            <table>
+                <tr><th>Coluna A</th><th>Coluna B</th><th>Coluna C</th></tr>
+                <tr><td>linha A</td><td>lina B</td><td>linha C</td></tr>
+            </table>
+            No caso de uma partição nova certifique-se que a mesma esteja formatada em ext4.<br> 
+            Caso não esteja utilize o gparted para formatar.<br> 
+            <p>Basta instalar executando a linha abaixo no terminal:</p>
+
+            <i> sudo apt-get install gparted </i><br>       
+            
+            <p>Após nossa partição estar formatada vamos listar nossos discos</p>
+            
+            <i>sudo fdisk -l</i><br>
+                
+            <p>Após listar todos nosso dispositivos de disco buscamos identificar qual é o Hd que queremos mover nossa pasta /home.</p>
+            <p>No meu caso o disco era o sda1, o qual eu pretendia usar como /home.</p>     
+            <p>Vamos montar a partição que iremos usar como a nova /home.</p>    
+            <p>Crie o diretório temporário para montar a partição.</p>    
+            
+            <i>sudo mkdir /media/temp</i>
+            
+            <p>Aqui muita atenção ao descrever qual disco.</p>
+            
+            <i>sudo mount /dev/sda1 /media/temp</i>
+            
+            <p>Mas vamos precisar do UUID da partição, para descobrir isso use o comando abaixo.</p>
+            
+            <i>sudo tune2fs -l /dev/sda1 | grep UUID</i>
+                        
+            <p>Deve retornar algo como abaixo.</p>
+            <i>Filesystem UUID: 186569fa-bo26–4fc8–8d69–45czb16b01b4</i>
+            
+            <p>Aqui será o ponto de maior atenção.</p>            
+            <p>Com o UUID na mão vamos para a parte principal da modificação. Vamos alterar o arquivo <b>/etc/fstab</b>.</p>
+            <p>Com privilégios de administrador <b>“root”</b> abra o arquivo fstab com qualquer editor de texto e adicione na linha final o seguinte:</p>
+            <i>UUID=186569fa-bo26–4fc8–8d69–45czb16b01b4 /home ext4 defaults 0 2</i>
+            <p>E aqui a dica principal surge, lembre-se de alterar a linha com o mesmo /home logo acima no texto para apenas /. </p>
+            
+            <p>Pois isso será essencial para que o sistema identifique a ordem da montagem do sistema. Fazendo que a partição definida por você seja a nova /home</p>
+            <p>Agora mova sua pasta /home para a partição digitando o seguinte no terminal:</p>
+            <i>sudo mv -f /home/$USER /media/temp/</i>
+            
+
+            <p>Espere terminar, pois pode levar alguns minutos dependendo da quantidade de arquivos na pasta.</p>
+            <p>Após isso fixe as permissões para o seu usuário com a linha abaixo:</p>
+            <i>sudo chown -R $USER:$USER /media/temp/$USER</i>
+            <p>Depois desmonte todas as partições com o comando abaixo:</p>
+            <i>sudo umount -a</i>
+            <p>E monte todas as partições novamente:</p>
+            <i>sudo mount -a</i>
+            
+            <p>Após esses passos sua pasta já está no novo local e funcionando, reinicie o sistema para testar se tudo está ok. </p>
+            <p>Caso seu sistema tenha criado uma nova pasta /home verifique o passo da edição do /etc/fstab.</p>
+
+
+        </div>
+    </body>
+</html>

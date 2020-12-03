@@ -1,0 +1,82 @@
+<!-- Version: 1.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Very simple Gallery v.1</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body>
+
+    <div class="wtricks-headerbar">
+        <a  href="http://wtricks.com.br" class="wtricks-logo">
+            Wtricks • Tutoriais e Dicas do Mundo Digital
+        </a>
+    </div>
+
+    <div class="wrap">
+        <!--Cabeçalho da página-->
+        <div class="page-header">
+            <h1>Galeria de Fotos responsiva com CSS e JS</h1>
+            <p>
+               Modelo simples de galeria de fotos usando apenas CSS e JS. Essa galeria trabalha
+                com o modelo mais básico possível. Recomendado para quem quer apenas exibir algumas fotos, sem nenhum outra função mais avançada.
+            </p>
+        </div>
+
+        <!-- Principal Section, with the gallery code. If you want use only gallery code,
+             you can copy all code bellow, with gallery-container.-->
+        <section class="container gallery-container">
+
+            <!--Slide-->
+            <div class="mySlides fade"> <!-- 01 -->
+                <div class="numbertext">01 / 05</div>
+                <img class="imgslide" src="images/arara-azul.jpg" alt="Arara Azul"/>
+                <div class="text">Arara Azul</div>
+            </div>
+
+            <div class="mySlides fade"> <!-- 02 -->
+                <div class="numbertext">02 / 05</div>
+                <img class="imgslide" src="images/arara-caninde.jpg" alt="Arara Canindé"/>
+                <div class="text">Arara Canindé</div>
+            </div>
+
+            <div class="mySlides fade"> <!-- 03 -->
+                <div class="numbertext">03 / 05</div>
+                <img class="imgslide" src="images/papagaio-verdadeiro.jpg" alt="Papagaio Verdadeiro"/>
+                <div class="text">Amazona é um género de papagaios da ordem Psittaciformes, característico da América, existindo desde o sul do México até o Caribe e a América do Sul. São conhecidos, popularmente, como papagaios, louros, ajerus, ajurus, jerus e jurus</div>
+            </div>
+
+            <div class="mySlides fade"> <!-- 04 -->
+                <div class="numbertext">04 / 05</div>
+                <img class="imgslide" src="images/Jandaia-Verdadeira.jpg" alt="Jandaia"/>
+                <div class="text">Jandaia</div>
+            </div>
+
+            <div class="mySlides fade"> <!-- 05 -->
+                <div class="numbertext">05 / 05</div>
+                <img class="imgslide" src="images/tiriba.jpg" alt="Jandaia"/>
+                <div class="text">Tiriba de testa vermelha</div>
+            </div>
+            <!--Final Slides-->
+
+            <!--Navigation-->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </section>
+        <!--End of galery-->
+
+        <!-- end of page -->
+        <footer class="page-footer">
+            <p>by: <a href="http://wtricks.com.br">Wtricks Tutoriais</a> | <a href="https://github.com/wtricks/very-simple-gallery">Fork on GitHub</a> | <a href="https://goo.gl/T3P7az">See original tutorial</a></p>
+        </footer>
+    </div>
+
+    <!-- JS Comportament -->
+    <script src="assets/js/comportamento.js"></script>
+</body>
+</html>

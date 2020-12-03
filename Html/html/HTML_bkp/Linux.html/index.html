@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<title> Linux </title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	</head>
+
+<body>
+
+	<div class="titulo">
+		
+		<h1><p>Terminal Linux</p>Guia Completo do "LS"
+		</h1>
+	
+	</div>
+	
+	<div class="sumario">
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+	</div>
+
+	<div class="introducao">
+		
+		<h2>INTRODUÇÃO</h2>
+
+	</div>
+
+	<div class="texto_introducao">
+
+		<p>O software ls é fundamental para os amantes do uso de terminal. 
+		Sem ele, esqueça! Não é possível verificar os arquivos existentes nos diretórios. 
+		Sua eficiência está no poder de listar arquivos de diversas formas, bem como listar arquivos em ordem alfabética, arquivos ocultos, apresentar resultados na saída padrão de forma colorida distinguindo subdiretórios de arquivos, entre outras opções. 
+		Embora o ls aparente ser um simples comando, suas funcionalidades são de extrema importância e de alta complexidade na manipulação de visualização de arquivos em diretórios, esse software por sua vez possibilita a listagem de arquivos em diretórios por meio do comando ls.</p>
+
+		<p> No GNU/Linux há um pacote chamado coreutils que disponibiliza uma série de utilitários importantes para os sistema, como o comando cd para desbravar diretórios, cp para copiar arquivos, mv para mover arquivos e o próprio ls para listar arquivos em diretórios.
+		Sua licença está vinculada a GNU GPLv3 (General Public License versão 3), o que o caracteriza como um software livre e de código aberto, que dispõe-se das quatro liberdades: usar, estudar, modificar e distribuir. </p>
+
+		<p> Atualmente seu desenvolvimento é mantido por Michael Stone (mstone@debian.org). Houve-se casos em que esses comandos não funcionaram ou apresentavam problemas devido a ausência desse pacote. Em seguida iremos conhecer as formas e opções de para a manipulação de listagem de arquivos. </p>
+
+	</div>
+
+	<div class="imagem_terminal">
+	
+		<img src="img/kali.png" alt="Comando ls -g" >
+		
+		<figcaption>
+			Imagem de um terminal Kali Linux 
+		</figcaption>
+
+	</div>
+
+	<div class="manipulando">
+
+		<h2><p> MANIPULANDO O LS </p></h2>
+
+	</div>
+		
+	<div class="texto_maipulando">
+		<p> A sintaxe do comando ls consiste em iniciar com o próprio comando seguido de opções ou parâmetros que por sua vez podem representar diversas situações e requisitos.</p> 
+		<p>Haverá diversas necessidades de se obter conhecimento de determinado arquivo em diretório, portanto a tabela abaixo apresenta uma série de argumentos e situações que podem ser encontradas no dia-a-dia de administradores de sistemas. </p>
+
+	</div>
+
+	<div class="tabela">
+
+		<h2><p>Tabela de parâmetros:</p></h2>
+		<h3><p>Opção / Especificação</p></h3>
+	</div>
+
+	<div class="lista_manipulando">
+		<p> -a, --all Não ignora entradas começando com.</p>
+		<p> -A, --almost-all Não lista as entradas implícitas . e .. </p> 
+		<p>	    --author Com -l, emite o autor de cada arquivo </p>
+		<p>	-b, --escape Emite escapes em octal para caracteres não-gráficos </p>  
+		<p>	    --block-size=TAMANHO Usa blocos de TAMANHO bytes </p>
+		<p>	-B, --ignore-backups Não lista as entradas implícitas terminadas com ~ -c</p> 
+		<p>	      Com -lt: ordena por, e mostra, ctime. </p>
+		<p>	      Com -l: mostra o ctime e ordena por nome </p>
+		<p>	-C Lista as entradas em colunas </p>
+		<p>	    --color[=QUANDO] Controla se usa cores para distinguir os tipos de arquivo. </p>
+		<p>	    QUANDO pode ser "never" (nunca), "always" (sempre) ou "auto" (automaticamente) </p>
+		<p>	-d , --directory Lista os diretório em vez de seu conteúdo e não interpreta ligações simbólicas </p>
+		<p>	-D, --dired Gera a saída projetada para modo "dired" do Emacs </p>
+		<p>	-f Não ordena, habilita -aU, desabilita -ls --color </p>
+		<p>	-F, --classify Anexa indicador (um dos */=>@|) às entradas</p> 
+		<p>	    --file-type Similar, exceto que não anexa "*" </p>
+		<p>	    --format=PALAVRA "across" (-x), "commas" (-m), "horizontal" (-x), "long" (-l), "single-column" (-1), "verbose" (-l), "vertical" (-C) </p>
+		<p>--full-time O mesmo que -l </p>
+		<p>    --time-style=full-iso </p>
+		<p>    --group-directories-first Lista os diretórios antes de listar os arquivos. </p>
+		<p>    Permite usar a opção --sort, mas o uso de --sort=none (-U) desabilita o agrupamento de diretórios. </p>
+		<p> -G, --no-group Em lista longa (-l), não emite os nomes de grupo -h, </p>
+		<p>	    --human-readable Com -l, emite os tamanhos em formato inteligível </p>
+		<p>	    --si Similar, mas usa potências de 1000, e não de 1024 -H, </p>
+		<p>	    --dereference-command-line Segue as ligações simbólicas listadas na linha de comando </p>
+		<p>	    --dereference-command-line-symlink-to-dir Segue toda ligação simbólica da linha de comando que apontar para um diretório </p>
+		<p>	    --hide=PADRÃO Não lista entradas implícitas que coincidam com o PADRÃO em sintaxe shell (ignorado quando se usa -a ou -A)</p>
+		<p> --indicator-style=PALAVRA Anexa o indicador de tipo no estilo PALAVRA para os nomes das entradas: "none" (nenhum, padrão), "slash" (-p), "file-type" (--file-type), "classify" (-F) "file-type" (--file-type), "classify" (-F) -i, </p>
+		<p>	    --inode Emite o número de índice de cada arquivo -I, </p>
+		<p>	    --ignore=PADRÃO Não lista as entradas implícitas que coincidam com o PADRÃO (em sintaxe shell) -k O mesmo que –block-size=1K -l Usa o formato de lista longa -L, </p>
+		<p>	    --dereference Quando mostrar informações de uma ligação simbólica, mostra as do arquivo a quem ela referencia, e não do arquivo tipo ligação em si </p>
+		<p>	-m Preenche toda a largura com uma lista de entradas separadas por vírgula </p>
+		<p>	-n, --numeric-uid-gid Como -l, mas lista usuário e grupo em números ID </p>
+		<p>	-N, --literal Emite nomes de entradas de forma crua (não trata, por exemplo, caracteres de controle de forma especial) </p>
+		<p>	-o Como -l, mas não lista informações sobre o grupo </p>
+		<p>	-p, --indicator-style=slash Anexa o indicador / aos diretórios </p>
+		<p>	-q, --hide-control-chars Emite ? ao invés de caracteres não gráficos </p>
+		<p>	--show-control-chars Emite caracteres não gráficos como são (padrão seja um terminal) </p>
+		<p>	-Q, --quote-name Coloca os nomes das entradas entre aspas </p>
+		<p>	--quoting-style=PALAVRA Usa estilo de citação PALAVRA para os nomes das entradas: Palavra = literal, locale, shell, shell-always, c, escape</p>
+		<p>	 -r, --reverse Inverte a ordem de ordenação </p>
+		<p>	 -R, --recursive Lista subdiretórios recursivamente </p>
+		<p>	 -s, --size Mostra o tamanho alocado para cada arquivo, em blocos </p>
+		<p>	 --sort=PALAVRA Ordena por PALAVRA em vez de pelo nome: </p>
+		<p>	 none -U, </p>
+		<p>	 extension -X,</p> 
+		<p>	 size -S, </p>
+		<p>	 time -t, </p>
+		<p>	 version -v (nenhum, extensão, tamanho, hora, versão) </p>
+		<p>	 --time=PALAVRA Com -l, mostra a hora como PALAVRA em vez do horário de modificação: </p>
+		<p>	 Palavra: </p>
+		<p>	 atime -u, </p>
+		<p>	 access -u, </p>
+		<p>	 use -u: último acesso, </p>
+		<p>	 ctime -c, </p>
+		<p>	 status -c: </p>
+		<p>	 última modificação; </p>
+		<p>	 usa o horário especificado como chave de ordenação se </p>
+		<p>	 --sort=time </p>
+		<p>	 --time-style=ESTILO Com -l, </p>
+		<p>	 emite os horários usando o estilo ESTILO: FORMATO é interpretado como em "date"; se for FORMATO1, FORMATO2, FORMATO1 se aplica a arquivos não recentes, e FORMATO2 aos recentes; se ESTILO tem como prefixo "posix-", ESTILO só faz efeito fora da localidade POSIX </p>
+		<p>	 -t Ordena pelo horário de modificação </p>
+		<p>	 -T --tabsize=COL Assume paradas de tabulação a cada COLS em vez de 8 </p>
+		<p>	 -u com -lt: ordena e exibe por data de acesso com -l: </p>
+		<p>	 exibe o tempo de acesso e ordena por nome sem nenhum parâmetro, ordena por data de acesso -U Não ordenar; exibe as entradas na ordem do diretório </p>
+		<p>	 -v Ordena pela ordem natural dos números de versão dentro do texto </p>
+		<p>	 -w, --width=COLS Assume a largura da tela como COLS </p>
+		<p>	 -x Lista as entradas por linha em vez de por coluna </p>
+		<p>	 -X Ordena por ordem alfabética das extensões das entradas </p>
+		<p>	 -Z, --context Emite qualquer contexto de segurança SELinux de cada arquivo -1 Lista arquivos por linha --help Exibe a ajuda --version Informa a versão Pode-se encontrar algumas situações em que o uso avançado do comando ls poderá ajudar na resolução de diversas tarefas que aparecem no nosso cotidiano, portanto será necessário conhecer de forma completa ou parcial para que as mesmas possam ser executadas resultando em minimizar esforços ou até mesmo solucionar problemas complexos que se baseavam em detalhes pouco observados. Há momentos que precisaremos de modificar ou configurar arquivos no sistema que estão ocultos ou até mesmo listar arquivos em diretórios que estão ocultos, vale lembrar que arquivos ocultos e diretórios ocultos começam com um . (ponto) no início. </p>
+		<p>	 Mas como eu posso encontrar arquivos ocultos em meus sistema? Simples! O seu diretório /home/usuário possui diversos arquivos que são responsáveis por manter as configurações de softwares e perfil do usuário, portanto será necessário usar um parâmetro especial para lista-los, o -a. </p>
+		<p>	Dê o seguinte comando no terminal para listar os arquivos e diretórios ocultos: </p>
+			 
+		<p>	 ls -a </p>
+			 
+		<p>	 . </p>
+		<p>	 .adobe </p>
+		<p>	 .aMule </p>
+		<p>	 .fontconfig </p>
+		<p>	 .profile</p> 
+		<p>	 ... </p>
+			 
+		<p>	 Como podem ver esse exemplo, os arquivos (o resultado está resumido) e diretório com .(ponto) estão ocultos, que naturalmente não estão visíveis na HOME do usuário. </p>
+		<p>	 A opção -b apresenta na saída padrão todos os arquivos que contém escapes. </p>
+		<p>	 Escapes são caracteres não gráficos que separam as palavras no nome de arquivos. </p>
+		<p>	 Por exemplo: quando vemos arquivos em modo gráfico naturalmente não vemos os caracteres de escapes, se víssemos o nome do arquivo em modo gráfico seria visto da seguinte maneira: </p>
+		<p>	 Visto em modo gráfico: Implementando Servidor de Aplicações PHP com Zend Framework.odt </p>
+		<p>	 Em modo texto com a opção -b: Implementando\ Servidor\ de\ Aplicações\ PHP\ com\ Zend\ Framework.odt </p>
+		<p>	 Portanto essa opção é valida para situações em que é necessário verificar quais arquivos possuem caracteres de escapes. </p>
+		<p>	 Em algumas distribuições GNU/Linux o comando ls não faz distinção de cores em arquivos e diretórios, porém o parâmetro --color pode ter três argumentos: </p>
+		<p>	 nunca colorir (none), </p>
+		<p>	 sempre colorir (always), </p>
+		<p>	 colorir automaticamente, que exige o parâmetro auto e surtirá efeito desde que a saída padrão esteja associada a um terminal (tty). </p>
+		<p>	 Sendo assim o comando "ls --color=none" não fará a distinção de cores, para que isso aconteça é preciso usar o argumento always da seguinte forma: 	 "ls --color=always" ou usar a opção auto. </p>
+		<p>	 Similar e mais complexo que o parâmetro none, podemos usar a "ls -f", que desabilitará o suporte a cores e exibirá arquivos ocultos, nada mais é do que a junção de "ls -aU" e "ls --color=none". </p>
+		<p>	 Também com a opção -F pode-se anexar indicadores nos arquivos classificando-os com símbolos que pode caracterizar arquivos e diretórios, os caracteres usados são: </p>
+		<p>	 * - Arquivos executáveis</p> 
+		<p>	 / - Para diretórios </p>
+		<p>	 > - Aponta de onde está vindo link simbólico </p>
+		<p>	 @ - Para link simbólico</p> 
+		<p>	 = - Soquete </p>
+
+		<p>	 Utilizando o comando "ls --classify" ele informará no final do arquivo em qual classe se enquadra o arquivo, por isso é importante saber os caracteres acima. </p>
+		<p>	 A opção --file-type possui o mesmo papel, porém não exibe os arquivos executáveis. Usar o --format=Palavra exigirá o uso de argumentos que podem corresponder a opções de separação por vírgula (commas), ordenar em uma única (1), como mostra a tabela abaixo: </p>
+		<p>	 Argumento Exemplo </p>
+		<p>	 "across" (-x) ls --format= across </p>
+		<p>	 "commas" (-m) ls --format= commas </p>
+		<p>	 "horizontal" (-x) ls --format= horizontal </p>
+		<p>	 "long" (-l) ls --format=long </p>
+		<p>	 "single-column" (-1) ls --format=single-column</p> 
+		<p>	 "verbose" (-l)" ls --format= verbose </p>
+		<p>	 "vertical" ls --format= vertical </p>
+
+		<p>	 A opção --full-time é semelhante à opção -l, mas não lista o dono do arquivo. </p>
+		<p>	 Na maioria das situações nos deparamos com a necessidade de saber qual é o tamanho dos arquivos, seja para fazer uma transferência via rede, ou movê-lo para um outro diretório qualquer, neste caso a opção -h irá acrescentar uma coluna na saída padrão do comando contendo o tamanho do arquivo, porém é necessário usar o parâmetro -l para que a coluna apareça. </p>
+		<p>	 Abaixo se as opções de uso e os respectivos argumentos: </p>
+		<p>	 O argumento -i refere-se ao número de índice de cada arquivo no sistema que são chamados de inodes, ou seja, cada arquivo é identificado por um número. Eles estão em um local reservado em seu disco rígido. Na figura abaixo a primeira coluna mostra o número identificador do arquivo. </p>
+		<p>	 Podemos usar argumentos para verificar o tamanho de arquivos desejados. Especificando o tamanho do arquivo podemos encontrar dentre vários arquivos um arquivo com o tamanho especificado. Por exemplo: entre vários arquivos em um diretório é possível listar somente os que possuem tamanho de 10k com o seguinte argumento --block-size=10K. </p>
+		<p>	 Descrever o uso do tradicional parâmetro -l é bem simples, embora seu resultado na saída padrão mostra-nos uma série de informações avançadas a respeito do arquivo. Possui o parâmetro -l, por caracterizar uma lista longa com formatos colunares.</p> 
+		<p>	 Em casos de necessidade de obter-se o resultado na saída padrão em formato de separação por vírgula (;) usa-se o parâmetro -m, como de costume o uso do formato colunar na saída padrão, essa opção é obtida de forma linear na saída padrão. Pode-se usar várias formas na saída padrão e portanto podemos colocar na saída padrão o caractere entre aspas duplas usando o parâmetro -Q, esse tipo de procedimento pode ser usado em scripts que envolvam a possibilidade de usar os caracteres para algum fim específico. </p>
+		<p>	 A ordem de listagem pode ser apresentada de forma recursiva usando a opção de -r e -R. </p>
+		<p>	 Também há a possibilidade de verificar o tamanho do espaço em disco reservado para o arquivo, a saída padrão é ordenada pelo tamanho do arquivo caso utilize a opção -s. Se houver a necessidade de ordenar a coluna por horário de modificação pode-se usar o parâmetro -t. </p>
+		<p>	 Também há um interessante parâmetro, o -Z, que referencia qualquer contexto de segurança SELinux de cada arquivo. </p>
+		<p>	 Finalizando, geralmente a exibição na saída padrão é feita em colunas que possuem informações importantes, bem como data e hora de alteração, usuário e grupo em que pertence o arquivo ou diretório, entre outras informações, dependendo da opção que subsequente ao comando. </p>
+		<p>	 Usualmente escrever comandos extensos podem nos custar tempo e esforço, portando pode-se customizar essas tarefas colocando comandos complexos em comandos curtos chamados alias. </p>
+		<p>	 Um modelo pré-definido pode ser encontrado dentro do arquivo de configuração global para o alias no final do arquivo /root/.bashrc, como mostra o exemplo abaixo. </p>
+		<p>	 # some more ls aliases</p> 
+		<p>	 #alias ll='ls -l' </p>
+		<p>	 #alias la='ls -A' </p>
+		<p>	 #alias l='ls -CF' </p>
+		<p>	 # enable programmable completion features (you don't need to enable # this, if it's already enabled in /etc/bash.bashrc and /etc/profile # sources /etc/bash.bashrc). </p>
+		<p>	 #if [ -f /etc/bash_completion ]; </p>
+		<p>	 then # . /etc/bash_completion </p>
+		<p>	 #fi </p>
+	
+	</div>
+	
+		<p>	 Existem várias formas de se obter resultados de listagem de diretórios com o ls, bastando que os parâmetros sejam anexados um ao outro para obter um relatório contextualizado a sua necessidade. </p>
+		<p>	 Em caso de necessidades de se obter algum tipo de informação pode-se usar o parâmetros de ajuda do próprio programa: ls --help </p>
+		
+
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/vrasclPn7ZY" frameborder="0" allow="autoplay rel=0; encrypted-media" allowfullscreen></iframe>
+
+
+
+		<p>	 O download desse arquivo pode ser feito aqui: 
+		<a href="http://www.4shared.com/file/242519891/51b5baab/12_-_O_comando_LS_de_A_a_Z.html">Link no 4shared</a> </p>
+		<p>	 SOBRE O AUTOR </p>
+		<p>	 José Cleydson Ferreira da Silva </p>
+		<p>	 Técnico em Tecnologia da Informação </p>
+		<p>	 formado pela Escola Técnica de Viçosa-MG (ETEV), </p>
+		<p>	 Bacharelando em Sistemas de Informação - FDV Viçosa-MG, </p>
+		<p>	 usuário do GNU/Linux por filosofia, acredito que os padrões abertos podem mudar os rumos do mercado de TI. </p>
+		<p>	 Contatos: </p>
+		<p>	 Web site: www.cleysinho.blogspot.com</p> 
+		<p>	 Web site: www.gnu-lia.org Email,</p> 
+		<p>	 gtalk: cleysinhonv@gmail.com</p> 
+		<p>	 Twitter: @cleysinhonv </p>
+		<a href="www.vivaolinux.com.br/"> link </a>
+		<a href=""></a>
+
+	</body>
+
+</html>
