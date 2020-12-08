@@ -1,0 +1,33 @@
+header {
+    text-align: center;
+    font-size: 30px;
+    color: cornsilk;
+    text-shadow: 1px 1px 1px black;
+    background-color: rgba(70, 0, 80, 0.5);
+    padding: 60px;
+}
+
+body {
+    background-image: url(../img/coringaLinux.png);
+    background-size: absolute;
+    color: cornsilk;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+/* DIVs */
+
+.comandos {}
+
+.comandos b {
+    font-size: 20px;
+}
+
+
+/* IDs */
+
+#botaoHome {
+    text-decoration: none;
+    font-size: 20px;
+}

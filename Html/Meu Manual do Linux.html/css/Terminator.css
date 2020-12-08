@@ -1,0 +1,31 @@
+header {
+    text-align: center;
+    color: #32CD32;
+    text-shadow: 1px 1px 1px greenyellow;
+}
+
+body {
+    background-image: url(../img/darthVaderMatrix.jfif);
+    background-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    color: greenyellow;
+}
+
+body a {
+    font-size: 15px;
+    text-decoration: none;
+}
+
+body b {
+    color: honeydew;
+}
+
+
+/* Divs */
+
+.atalhos {
+    margin-top: 50px;
+    background-color: rgba(0, 55, 0, 0.5);
+    background-size: auto;
+}

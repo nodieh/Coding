@@ -1,0 +1,46 @@
+/* Geral*/
+
+body {
+    background-image: url(../img/pinguinOnWin.jpg);
+    background-size: 100%;
+    font-family: Segoe, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    color: white;
+}
+
+header {
+    float: auto;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(0, 99, 208);
+    text-shadow: 1px 1px 1px #ffffff;
+    /* TEXT-SHADOW >> primeiro valor é horizontal,segundo é vertical, o terceiro é o blur e o quarto é a cor*/
+    background-color: rgba(0, 0, 55, 0.5);
+}
+
+
+/* Classes*/
+
+.sumario h1 {
+    padding-left: auto;
+    margin-left: 200px;
+}
+
+.sumario li {
+    color: #eeee;
+    padding: 5px;
+}
+
+.sumario a {
+    color: whitesmoke;
+    /*remover sublinhado*/
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.grid {
+    padding-left: auto;
+    margin-left: 180px;
+}
+
+
+/* IDs */

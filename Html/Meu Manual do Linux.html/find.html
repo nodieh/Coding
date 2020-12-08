@@ -1,59 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<title>Comando Find</title>
+    <meta charset="utf-8">
+    <title>Comando Find</title>
 </head>
-	<div class="comando_find">
-		<body>
-			<h1>Aqui listarei um exemplo de linha de comando para encontrar e mover arquivos:</h1>
+<header>
 
-			Exemplo:
-			<br> 
+</header>
+<div class="comando_find">
 
-			Encontre dentro do diretorio "pendrive" todos os arquivos que possuem ".mp3" no nome e mova-os para a pasta "Música" 
-			<br><br>
+    <body>
+        <h1>Aqui listarei um exemplo de linha de comando para encontrar e mover arquivos:</h1>
 
-			<i>#:find ./pendrive/ -name "*.mp3" -exec  mv -v {} /home/dieh/Música/ \;</i>
-			<br><br>
+        Exemplo:
+        <br> Encontre dentro do diretorio "pendrive" todos os arquivos que possuem ".mp3" no nome e mova-os para a pasta "Música"
+        <br><br>
 
-			find - remoção de arquivos e diretórios vazios
-			<br><br>
+        <i>#:find ./pendrive/ -name "*.mp3" -exec  mv -v {} /home/dieh/Música/ \;</i>
+        <br><br> find - remoção de arquivos e diretórios vazios
+        <br><br> Para remover diretórios e arquivos vazios (tamanho zero) de seu diretório pessoal (ou de qualquer outro lugar), utilize o comando find com as seguintes diretivas:<br><br>
+        <i>#:find . -empty</i>
+        <br><br> O comando acima irá localizar tanto arquivos quanto diretórios.
+        <br> Para localizar apenas arquivos, utilize o comando:
+        <br><br>
 
-			Para remover diretórios e arquivos vazios (tamanho zero) de seu diretório pessoal (ou de qualquer outro lugar), utilize o comando find com as seguintes diretivas:<br><br>
-			<i>#:find . -empty</i>
-			<br><br>
+        <i>#:find . -type f -empty</i>
+        <br><br> Para localizar apenas diretórios:
+        <br><br>
+        <i>#:find . -type d -empty</i>
+        <br><br> Para remover os arquivos encontrados:
+        <br><br>
 
-			O comando acima irá localizar tanto arquivos quanto diretórios.
-			<br>
-			Para localizar apenas arquivos, utilize o comando:
-			<br><br>
+        <i>#:find . -type d -empty | xargs rm</i>
+        <br><br> Para remover os arquivos ou diretórios vazios, apenas no diretório corrente:
+        <br><br>
+        <i>#:find . -maxdepth 1 -type d -empty | xargs rmdir</i>
+        <br> ou
+        <br>
 
-			<i>#:find . -type f -empty</i>
-			<br><br>
+        <i>#:find . -maxdepth 1 -type f -empty | xargs rm</i>
+        <br><br>
 
-			Para localizar apenas diretórios:
-			<br><br>
-			<i>#:find . -type d -empty</i> 
-			<br><br>
+    </body>
+</div>
 
-			Para remover os arquivos encontrados:
-			<br><br>
-
-			<i>#:find . -type d -empty | xargs rm</i>
-			<br><br>
-
-			Para remover os arquivos ou diretórios vazios, apenas no diretório corrente:
-			<br><br>
-			<i>#:find . -maxdepth 1 -type d -empty | xargs rmdir</i> 
-			<br>
-
-			ou
-			<br>
-
-			<i>#:find . -maxdepth 1 -type f -empty | xargs rm</i>
-			<br><br>
-				
-		</body>
-	</div>
 </html>

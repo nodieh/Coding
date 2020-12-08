@@ -1,47 +1,72 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Terminal Linux</title>
-		<link rel="stylesheet" type="text/css" href="css/styles.css">
-	</head>
-	<body>
-		<a href="sumario.html">HOME</a>
-		<h1>Os 13 Comandos do bash que todo usuário deve saber</h1>
-		<p>Neste post, conheça 13 atalhos do Terminal Linux que todo usuário deve saber.</p> 
-		<p>Esses atalhos do Linux aumentam sua produtividade e eficiência ao usar a linha de comando.
-		Porém, alguns desses atalhos podem depender do Shell que você está usando. O Bash é o shell mais popular. Então, a lista está focada no Bash. Se você quiser, pode chamá-lo de lista de atalhos do Bash também.</p>
-		<p>Observe que foram usadas as letras maiúsculas nos atalhos de teclado. Contudo, isso NÃO significa que você precisa pressionar a tecla Shift enquanto usa esses atalhos.</p>
-		
-		<p><b>1. Tab</b></p>
-		Este é o atalho do Linux que você não pode viver sem. Isso economizará muito tempo na linha de comando do Linux. Basta começar a digitar um comando, nome do arquivo, nome do diretório ou até mesmo opções de comando e aperte a tecla tab. Ele irá automaticamente completar o que você estava digitando ou mostrará todos os resultados possíveis.
-		<p><b>2. Ctrl + C</b></p>
-		Estas são as teclas que você deve pressionar para sair de um comando ou processo em um terminal. Isso interromperá imediatamente um programa em execução. Portanto, se você quiser parar de usar um programa em execução, basta pressionar esta combinação de teclas.
-		<p><b>3. Ctrl + Z</b></p>
-		Este atalho irá ativar um programa em execução em segundo plano. Normalmente, você pode conseguir isso antes de executar o programa usando a opção &, mas se você esqueceu de fazer isso, use esta combinação de teclas.
-		<p><b>4. Ctrl + D</b></p>
-		Este atalho de teclado desconecta você do terminal atual. Então, se você estiver usando uma conexão SSH , ela será fechada. Se você estiver usando um terminal, o aplicativo será fechado imediatamente. É o equivalente ao comando ‘exit’.
-		<p><b>5. Ctrl + L</b></p>
-		Como você limpa sua tela de terminal? Em vez de escrever CLEAR, você pode simplesmente usar Ctrl + L para limpar o terminal. Prático, não é?
-		<p><b>6. Ctrl + A</b></p>
-		Este atalho moverá o cursor para o início da linha.  Suponha que você digitou um longo comando ou caminho no terminal e deseja ir para o início dele. Se usar a tecla de seta para mover o cursor levará bastante tempo. Assim, o Ctrl + A ganha o dia.
-		<p><b>7. Ctrl + E</b></p>
-		Esse atalho é oposto ao Ctrl + A.  O Ctrl + A envia o cursor para o início da linha, enquanto Ctrl + E move o cursor para o final da linha.
-		<p><b>8. Ctrl + U</b></p>
-		Digitado um comando errado? Em vez de usar o backspace para descartar o comando atual, use o atalho Ctrl + U no terminal do Linux. Este atalho apaga tudo, desde a posição atual do cursor até o início da linha.
-		<p><b>9. Ctrl + K</b></p>
-		Este é semelhante ao atalho Ctrl + U. A única diferença é que, em vez do início da linha, ela apaga tudo, da posição atual do cursor até o final da linha.
-		<p><b>10. Ctrl + W</b></p>
-		Você acabou de aprender a apagar texto desde o começo até o fim da linha. Mas e se você só precisa excluir uma única palavra? Use o atalho Ctrl + W.
-		Usando o atalho Ctrl + W, você pode apagar a palavra anterior à posição do cursor. Se o cursor estiver em uma palavra, apagará todas as letras da posição do cursor até o início da palavra.
-		<p><b>11. Ctrl + Y</b></p>
-		Isto irá colar o texto apagado ao usar os atalhos Ctrl + W, Ctrl + U e Ctrl + K. Útil no caso de você ter apagado o texto errado ou se você precisar usar o texto apagado em outro lugar.
-		<p><b>12. Ctrl + P</b></p>
-		Você pode usar este atalho para visualizar o comando anterior. Você pode pressioná-lo repetidamente para continuar retornando ao histórico de comandos. Em muitos terminais, o mesmo pode ser alcançado com a tecla PgUp.
-		<p><b>13. Ctrl + N</b></p>
-		Você pode usar este atalho junto com o Ctrl + P. Ctrl + N exibe o próximo comando. Portanto, se você estiver visualizando comandos anteriores com Ctrl + P, poderá usar Ctrl + N para navegar para frente e para trás. Muitos terminais têm esse atalho mapeado para a chave PgDn.
-	 	
 
-	</body>
+<head>
+    <meta charset="utf-8">
+    <title>Terminal Linux</title>
+    <link rel="stylesheet" type="text/css" href="css/terminal.css">
+</head>
+
+<body>
+    <a id="botaoHome" href="sumario.html">Página Inicial</a>
+    <header>
+        <h1>Os 13 Comandos do bash que todo usuário deve saber</h1>
+    </header>
+    <p>Neste post, conheça 13 atalhos do Terminal Linux que todo usuário deve saber.
+    </p>
+    <p>Esses atalhos do Linux aumentam sua produtividade e eficiência ao usar a linha de comando.<br> Porém, alguns desses atalhos podem depender do Shell que você está usando.<br> O Bash é o shell mais popular. Então, a lista está focada no Bash.<br> Se
+        você quiser, pode chamá-lo de lista de atalhos do Bash também.</p>
+    <p>Observe que foram usadas as letras maiúsculas nos atalhos de teclado.<br> Contudo, isso NÃO significa que você precisa pressionar a tecla Shift enquanto usa esses atalhos.</p>
+    <div class="comandos">
+        <p>
+            <b>1. Tab</b><br> Este é o atalho do Linux que você não pode viver sem. Isso economizará muito tempo na linha de comando do Linux.<br> Basta começar a digitar um comando, nome do arquivo, nome do diretório ou até mesmo opções de comando e
+            aperte a tecla tab.<br> Ele irá automaticamente completar o que você estava digitando ou mostrará todos os resultados possíveis.
+        </p>
+        <p>
+            <b>2. Ctrl + C</b><br> Estas são as teclas que você deve pressionar para sair de um comando ou processo em um terminal.<br> Isso interromperá imediatamente um programa em execução.<br> Portanto, se você quiser parar de usar um programa em
+            execução, basta pressionar esta combinação de teclas.
+        </p>
+        <p>
+            <b>3. Ctrl + Z</b><br> Este atalho irá ativar um programa em execução em segundo plano.<br> Normalmente, você pode conseguir isso antes de executar o programa usando a opção &, mas se você esqueceu de fazer isso, use esta combinação de teclas.
+        </p>
+        <p>
+            <b>4. Ctrl + D</b><br> Este atalho de teclado desconecta você do terminal atual.<br> Então, se você estiver usando uma conexão SSH , ela será fechada.<br> Se você estiver usando um terminal, o aplicativo será fechado imediatamente.<br> É o
+            equivalente ao comando ‘exit’.
+        </p>
+        <p>
+            <b>5. Ctrl + L</b><br> Como você limpa sua tela de terminal? Em vez de escrever CLEAR, você pode simplesmente usar Ctrl + L para limpar o terminal. Prático, não é?
+        </p>
+        <p>
+            <b>6. Ctrl + A</b><br> Este atalho moverá o cursor para o início da linha.<br> Suponha que você digitou um longo comando ou caminho no terminal e deseja ir para o início dele.<br> Se usar a tecla de seta para mover o cursor levará bastante
+            tempo.<br> Assim, o Ctrl + A ganha o dia.
+        </p>
+        <p>
+            <b>7. Ctrl + E</b><br> Esse atalho é oposto ao Ctrl + A.<br> O Ctrl + A envia o cursor para o início da linha, enquanto Ctrl + E move o cursor para o final da linha.
+        </p>
+        <p>
+            <b>8. Ctrl + U</b><br> Digitado um comando errado?<br> Em vez de usar o backspace para descartar o comando atual, use o atalho Ctrl + U no terminal do Linux.<br> Este atalho apaga tudo, desde a posição atual do cursor até o início da linha.
+        </p>
+        <p>
+            <b>9. Ctrl + K</b><br> Este é semelhante ao atalho Ctrl + U.<br> A única diferença é que, em vez do início da linha, ela apaga tudo, da posição atual do cursor até o final da linha.
+        </p>
+        <p>
+            <b>10. Ctrl + W</b><br> Você acabou de aprender a apagar texto desde o começo até o fim da linha.<br> Mas e se você só precisa excluir uma única palavra?<br> Use o atalho Ctrl + W.<br> Usando o atalho Ctrl + W, você pode apagar a palavra anterior
+            à posição do cursor.<br> Se o cursor estiver em uma palavra, apagará todas as letras da posição do cursor até o início da palavra.
+        </p>
+        <p>
+            <b>11. Ctrl + Y</b><br> Isto irá colar o texto apagado ao usar os atalhos Ctrl + W, Ctrl + U e Ctrl + K.<br> Útil no caso de você ter apagado o texto errado ou se você precisar usar o texto apagado em outro lugar.
+        </p>
+        <p>
+            <b>12. Ctrl + P</b><br> Você pode usar este atalho para visualizar o comando anterior.<br> Você pode pressioná-lo repetidamente para continuar retornando ao histórico de comandos.<br> Em muitos terminais, o mesmo pode ser alcançado com a tecla
+            PgUp.
+        </p>
+        <p>
+            <b>13. Ctrl + N</b><br> Você pode usar este atalho junto com o Ctrl + P.<br> Ctrl + N exibe o próximo comando.<br> Portanto, se você estiver visualizando comandos anteriores com Ctrl + P, poderá usar Ctrl + N para navegar para frente e para
+            trás.
+            <br> Muitos terminais têm esse atalho mapeado para a chave PgDn.
+        </p>
+    </div>
+
+</body>
+
 </html>
