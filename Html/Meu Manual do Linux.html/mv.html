@@ -1,56 +1,29 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<title>Comando mv</title>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta charset="utf-8">
+    <title>Comando mv</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <div class="comando_mv">
-<body>
-	<a href="sumario.html"><b>HOME</b></a> <!-- Home buton -->
-	<h1>Remoção seletiva de arquivos em um diretório</h1>
-<h2>Quando usamos o comando rm geralmente fornecemos os nomes dos arquivos ou então usamos algum metacaracter para limitar a seleção.<br>
-Raramente fazemos o contrário, ou seja, apagar todos os arquivos com exceção de alguns deles.<br>
-Por exemplo, o comando "rm *.doc" irá apagar TODOS os arquivos que tenham o sufixo ".doc".<br><br>
- 
-Podemos sofisticar um pouco mais o uso do comando "rm", utilizando a tabela abaixo:<br><br>
 
-?(lista-de-argumentos)	Casa com zero ou uma ocorrência do texto fornecida<br>
-*(lista-de-argumentos)	Casa com zero ou mais ocorrências do texto fornecido<br>
-+(lista-de-argumentos)	Casa com uma ou mais ocorrências do texto fornecido<br>
-@(lista-de-argumentos)	Casa com um dos argumentos fornecidos<br>
-!(lista-de-argumentos)	Casa com tudo menos o argumento fornecido<br><br>
+    <body>
+        <a href="index.html"><b>HOME</b></a>
+        <!-- Home buton -->
+        <h1>Remoção seletiva de arquivos em um diretório</h1>
+        <h2>Quando usamos o comando rm geralmente fornecemos os nomes dos arquivos ou então usamos algum metacaracter para limitar a seleção.<br> Raramente fazemos o contrário, ou seja, apagar todos os arquivos com exceção de alguns deles.<br> Por exemplo,
+            o comando "rm *.doc" irá apagar TODOS os arquivos que tenham o sufixo ".doc".<br><br> Podemos sofisticar um pouco mais o uso do comando "rm", utilizando a tabela abaixo:<br><br> ?(lista-de-argumentos) Casa com zero ou uma ocorrência do texto
+            fornecida<br> *(lista-de-argumentos) Casa com zero ou mais ocorrências do texto fornecido<br> +(lista-de-argumentos) Casa com uma ou mais ocorrências do texto fornecido<br> @(lista-de-argumentos) Casa com um dos argumentos fornecidos<br> !(lista-de-argumentos)
+            Casa com tudo menos o argumento fornecido<br><br> Podem ser espeficados vários argumentos entre parênteses, basta separá-los com o caractere "|" (pipe).<br> Exemplos:
 
-Podem ser espeficados vários argumentos entre parênteses, basta separá-los com o caractere "|" (pipe).<br>
-
-Exemplos:<br><br>
-
-Apagar todos os arquivos do diretório local MENOS o arquivo arquivo1.doc.<br>
-O caractere "!" funciona como uma negação da expressão em parenteses:<br><br>
-  rm !(arquivo1.doc)<br><br>
-
-Apaga todos os arquivos exceto os arquivos "arquivo1.doc" e "arquivo2.doc":<br><br>
-  rm  !(arquivo1.doc|arquivo2.doc)<br><br>
-
-Apaga todos os arquivos exceto aqueles terminados em ".zip":<br><br>
-  rm  !(*.zip)<br><br>
-
-Apaga todos os arquivos exceto os arquivos terminados em ".iso" e ".zip":<br><br>
-  rm  !(*.zip|*.iso)<br><br>
-
-Para que esta funcionalidade funcione, é preciso que o recurso extglob esteja ativo:<br>
-  $ shopt extglob<br>
-  extglob         off<br>
-Para ativar:<br>
-  $ shopt -s extglob<br>
-Por padrão, esta funcionalidade já vem ativada em grande parte das distribuições GNU/Linux.<br>
-
-Este recurso pode ser usado com qualquer comando:<br><br>
-
-  mv !(*.txt) /tmp<br><br>
-Neste exemplo, todos os arquivos que NÃO possuam o sufixo ".txt" são movidos para o diretório "/tmp/".
-</h2>
-</body>
+            <br><br> Apagar todos os arquivos do diretório local MENOS o arquivo arquivo1.doc.<br> O caractere "!" funciona como uma negação da expressão em parenteses:<br><br> rm !(arquivo1.doc)<br><br> Apaga todos os arquivos exceto os arquivos "arquivo1.doc"
+            e "arquivo2.doc":<br><br> rm !(arquivo1.doc|arquivo2.doc)<br><br> Apaga todos os arquivos exceto aqueles terminados em ".zip":<br><br> rm !(*.zip)<br><br> Apaga todos os arquivos exceto os arquivos terminados em ".iso" e ".zip":<br><br> rm
+            !(*.zip|*.iso)<br><br> Para que esta funcionalidade funcione, é preciso que o recurso extglob esteja ativo:<br> $ shopt extglob<br> extglob off<br> Para ativar:<br> $ shopt -s extglob<br> Por padrão, esta funcionalidade já vem ativada em grande
+            parte das distribuições GNU/Linux.<br> Este recurso pode ser usado com qualquer comando:<br><br> mv !(*.txt) /tmp<br><br> Neste exemplo, todos os arquivos que NÃO possuam o sufixo ".txt" são movidos para o diretório "/tmp/".
+        </h2>
+    </body>
 </div>
+
 </html>

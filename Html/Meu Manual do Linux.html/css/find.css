@@ -1,0 +1,14 @@
+body i {
+    font-size: 30px;
+    background-color: rgba(0, 100, 150, 0.5);
+}
+
+
+/* Classes */
+
+
+/* IDs */
+
+#botaoHome {
+    text-decoration: none;
+}

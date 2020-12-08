@@ -4,20 +4,25 @@
 <head>
     <meta charset="utf-8">
     <title>Comando Find</title>
+    <link rel="stylesheet" type="text/css" href="css/find.css">
 </head>
-<header>
 
-</header>
 <div class="comando_find">
 
     <body>
+        <a id="botaoHome" href="index.html">Página inicial</a>
+        <header>
+
+        </header>
+
         <h1>Aqui listarei um exemplo de linha de comando para encontrar e mover arquivos:</h1>
 
         Exemplo:
         <br> Encontre dentro do diretorio "pendrive" todos os arquivos que possuem ".mp3" no nome e mova-os para a pasta "Música"
         <br><br>
 
-        <i>#:find ./pendrive/ -name "*.mp3" -exec  mv -v {} /home/dieh/Música/ \;</i>
+        <i>#:find ./pendrive/ -name "*.mp3" -exec mv -v {}
+                /home/dieh/Música/ \;</i>
         <br><br> find - remoção de arquivos e diretórios vazios
         <br><br> Para remover diretórios e arquivos vazios (tamanho zero) de seu diretório pessoal (ou de qualquer outro lugar), utilize o comando find com as seguintes diretivas:<br><br>
         <i>#:find . -empty</i>
